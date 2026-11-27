@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TAGDROP — Black Friday Deal Finder 2026</title>
+<meta name="description" content="25 real Black Friday 2026 deals, each price-checked by hand on 27 Nov 2026, with an honest verdict on whether it is really a deal.">
+<link rel="stylesheet" href="style.css">
+<script src="deals.js"></script>
+<script src="render.js"></script>
+<script src="finder.js"></script>
+</head>
+<body>
+<header class="site-head">
+  <a class="brand" href="#/">TAG<span>DROP</span></a>
+  <p class="tagline">Black Friday deal finder — every price checked by hand, every deal graded honestly.</p>
+  <div class="head-stats" id="headStats"></div>
+</header>
+
+<section class="verdict-key" id="verdictKey" aria-label="How to read the verdicts">
+  <h2>How we grade a deal</h2>
+  <div class="key-row">
+    <p><span class="badge badge-newlow">REAL NEW LOW</span> The lowest price this product has sold for, with the tracking evidence to show it.</p>
+    <p><span class="badge badge-strong">STRONG PRICE</span> A genuine, deep cut worth acting on today.</p>
+    <p><span class="badge badge-routine">ROUTINE / INFLATED</span> Looks like a sale, but the history says otherwise — read the note before you buy.</p>
+  </div>
+</section>
+
+<section class="toolbar" id="toolbar" aria-label="Search and filters">
+  <label class="search-box">
+    <span>Search deals</span>
+    <input id="searchInput" type="search" placeholder="Try: OLED, Beats, vacuum, Switch…" autocomplete="off">
+  </label>
+  <div class="filter-row">
+    <label>Category
+      <select id="categoryFilter"></select>
+    </label>
+    <label>Store
+      <select id="storeFilter"></select>
+    </label>
+    <label>Discount at least
+      <select id="discountFilter">
+        <option value="0">Any discount</option>
+        <option value="25">25% off</option>
+        <option value="40">40% off</option>
+        <option value="50">50% off</option>
+      </select>
+    </label>
+    <label>Verdict
+      <select id="verdictFilter">
+        <option value="all">All verdicts</option>
+        <option value="newlow">Real new lows only</option>
+        <option value="strong">Strong prices only</option>
+        <option value="routine">Routine / inflated only</option>
+      </select>
+    </label>
+    <label>Sort by
+      <select id="sortSelect">
+        <option value="discount">Biggest discount</option>
+        <option value="savings">Most money saved</option>
+        <option value="priceAsc">Price: low to high</option>
+        <option value="priceDesc">Price: high to low</option>
+      </select>
+    </label>
+  </div>
+  <p class="result-count" id="resultCount" role="status"></p>
+</section>
+
+<main id="app">
+  <div class="deal-grid" id="dealGrid"></div>
+  <p class="empty-note" id="emptyNote" hidden>No deals match those filters. Loosen the discount or clear the search to see the full board.</p>
+</main>
+
+<section class="detail-view" id="detailView" hidden></section>
+
+<footer class="site-foot">
+  <p><strong>How this board was built:</strong> every deal was found in Black Friday 2026 coverage and then read at the store or in the named deals source on Friday 27 November 2026 (WIB). Prices move fast on Black Friday — the check time and source on each card say exactly where and when its price was read. Store links open the product at that store.</p>
+  <p>TAGDROP is an original, independent deal board. Store and product names belong to their owners.</p>
+</footer>
+</body>
+</html>
